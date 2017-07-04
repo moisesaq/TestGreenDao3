@@ -3,15 +3,15 @@ package moises.com.testgreendao3.database;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;
 import org.greenrobot.greendao.annotation.Id;
-import org.greenrobot.greendao.annotation.Index;
 import org.greenrobot.greendao.annotation.NotNull;
+import org.greenrobot.greendao.annotation.Property;
 
-@Entity
+@Entity(nameInDb = "user")
 public class User extends Person{
     @Id
     protected Long id;
     @NotNull
-    @Index(name = "user_name")
+    @Property(nameInDb = "user_name")
     protected String userName;
 
     @Generated(hash = 586692638)
